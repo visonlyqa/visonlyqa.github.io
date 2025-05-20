@@ -53,60 +53,23 @@
 </head>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;"> -->
-      <!-- <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a> -->
-      <!-- @PAN TODO: consider adding links? -->
-      <!-- <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://chameleon-llm.github.io/">
-            <b>Chameleon</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
-          <a class="navbar-item" href="https://scienceqa.github.io/">
-            <b>ScienceQA</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
-          <a class="navbar-item" href="https://github.com/OpenGVLab/LLaMA-Adapter">
-            <b>LLaMA-Adapter (V2)</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
-          <a class="navbar-item" href="https://promptpg.github.io/">
-            PromptPG
-          </a>
-          <a class="navbar-item" href="https://arxiv.org/abs/2307.10635">
-            SciBench
-          </a>
-          <a class="navbar-item" href="https://arxiv.org/abs/2305.12524">
-            TheoremQA
-          </a>
-          <a class="navbar-item" href="https://lila.apps.allenai.org/">
-            Lila
-          </a>
-          <a class="navbar-item" href="https://iconqa.github.io/">
-            IconQA
-          </a>
-          <a class="navbar-item" href="https://lupantech.github.io/inter-gps/">
-            Inter-GPS
-          </a>
-        </div>
-      </div>
-    </div>
 
-  </div>
-</nav> -->
+<!-- Navbar -->
+<div id="included-content"></div>
+
+<script>
+  fetch('https://raw.githubusercontent.com/fover-prm/fover-prm.github.io/refs/heads/main/navbar.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('included-content').innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error fetching HTML:', error);
+    });
+</script>
 
 
 <section class="hero">
