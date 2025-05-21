@@ -250,12 +250,7 @@
       <button class="delete" aria-label="close" onclick="document.getElementById('bibtex-modal').classList.remove('is-active')"></button>
     </header>
     <section class="modal-card-body">
-      <pre id="bibtex-entry" style="white-space: pre-wrap; font-size: 0.9rem; background: #f7f7f7; padding: 1rem; border-radius: 5px;">@article{kamoi2024visonlyqa,
-  author = {Ryo Kamoi and Yusen Zhang and Sarkar Snigdha Sarathi Das and Ranran Haoran Zhang and Rui Zhang},
-  journal = {arXiv preprint arXiv:2412.00947},
-  title = {VisOnlyQA: Large Vision Language Models Still Struggle with Visual Perception of Geometric Information},
-  year = {2024}
-}</pre>
+      <pre id="bibtex-entry" style="white-space: pre-wrap; font-size: 0.9rem; background: #f7f7f7; padding: 1rem; border-radius: 5px;"></pre>
       <button class="button is-small is-link mt-3" onclick="copyBibtex()">Copy</button>
     </section>
   </div>
@@ -1310,12 +1305,7 @@
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
 
     <div class="box">
-      <pre><code id="bibtex-entry">@article{kamoi2024visonlyqa,
-  author = {Ryo Kamoi and Yusen Zhang and Sarkar Snigdha Sarathi Das and Ranran Haoran Zhang and Rui Zhang},
-  journal = {arXiv preprint arXiv:2412.00947},
-  title = {VisOnlyQA: Large Vision Language Models Still Struggle with Visual Perception of Geometric Information},
-  year = {2024}
-}</code></pre>
+      <pre><code id="bibtex-entry2"></code></pre>
       <div class="has-text-centered">
         <button class="button is-small is-link" onclick="copyBibtex()">Copy BibTeX</button>
       </div>
@@ -1324,8 +1314,17 @@
 </section>
 
 <script>
+  fetch('bibtex.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('bibtex-entry').innerHTML = data;
+      document.getElementById('bibtex-entry2').innerHTML = data;
+    });
+</script>
+
+<script>
   function copyBibtex() {
-    const bibtex = document.getElementById("bibtex-entry").innerText;
+    const bibtex = document.getElementById("bibtex-entry2").innerText;
     navigator.clipboard.writeText(bibtex);
   }
 </script>
