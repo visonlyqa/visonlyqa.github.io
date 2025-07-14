@@ -329,7 +329,7 @@
           </p>
           <ol>
             <li>
-              Even large LVLMs struggle with perceiving geometric information &mdash; 20 LVLMs we evaluate, including GPT-4o and Gemini 1.5 Pro, work poorly on 
+              Even large LVLMs struggle with perceiving geometric information &mdash; 23 LVLMs we evaluate, including GPT-4o and Gemini 2.5 Pro, work poorly on 
               <span class="visonlyqa">VisOnlyQA</span>, while human performance is nearly perfect.
             </li>
             <li>
@@ -1053,7 +1053,7 @@
 
         <div class="content has-text-justified">
           <p>
-            We evaluate 20 LVLMs, including GPT-4o and Gemini 1.5 Pro, on <span class="visonlyqa">VisOnlyQA</span>. Our results show that even state-of-the-art LVLMs still often cannot accurately perceive basic geometric information in images.
+            We evaluate 23 LVLMs, including GPT-4o and Gemini 2.5 Pro, on <span class="visonlyqa">VisOnlyQA</span>. Our results show that even state-of-the-art LVLMs still often cannot accurately perceive basic geometric information in images.
           </p>
           <p class="has-text-centered">
             <a href="#result-tables">Full results are provided at the end of this page.</a>
@@ -1236,10 +1236,13 @@
               <tr><td>InternVL2-40B</td><td>43.0</td><td>45.0</td><td>32.0</td><td>23.0</td><td>31.0</td><td>57.0</td><td>28.0</td><td>30.0</td><td>61.0</td><td>58.0</td><td>42.1</td></tr>
               <tr><td>InternVL2-76B</td><td>44.0</td><td>42.0</td><td>28.0</td><td>34.0</td><td>45.0</td><td>56.0</td><td>60.0</td><td>36.0</td><td>63.0</td><td>54.0</td><td>46.0</td></tr>
               <tr><td>Claude 3.5 Sonnet</td><td>50.0</td><td>47.0</td><td>23.0</td><td>20.0</td><td>33.0</td><td>59.0</td><td>52.0</td><td>40.0</td><td>61.0</td><td>52.0</td><td>43.4</td></tr>
+              <tr><td>Claude Sonnet 4</td><td>38.0</td><td>57.0</td><td>32.0</td><td>25.0</td><td>33.0</td><td>66.0</td><td>72.0</td><td>44.0</td><td>70.0</td><td>54.0</td><td>48.1</td></tr>
+              <tr><td>Claude Opus 4</td><td>41.0</td><td>47.0</td><td>35.0</td><td>34.0</td><td>36.0</td><td>60.0</td><td>72.0</td><td>50.0</td><td>80.0</td><td>50.0</td><td>49.3</td></tr>
               <tr><td>GPT-4o-mini</td><td>45.0</td><td>66.0</td><td>26.0</td><td>19.0</td><td>30.0</td><td>58.0</td><td>58.0</td><td>32.0</td><td>40.0</td><td>53.0</td><td>42.4</td></tr>
               <tr><td>GPT-4o</td><td>58.0</td><td>48.0</td><td>27.0</td><td>34.0</td><td>38.0</td><td>69.0</td><td>72.0</td><td>50.0</td><td>46.0</td><td>58.0</td><td>48.8</td></tr>
               <tr><td>Gemini 1.5 Flash</td><td>47.0</td><td>51.0</td><td>25.0</td><td>24.0</td><td>39.0</td><td>60.0</td><td>68.0</td><td>42.0</td><td>58.0</td><td>58.0</td><td>49.2</td></tr>
               <tr><td>Gemini 1.5 Pro</td><td>47.0</td><td>53.0</td><td>33.0</td><td>40.0</td><td>53.0</td><td>70.0</td><td>62.0</td><td>52.0</td><td>67.0</td><td>53.0</td><td>52.6</td></tr>
+              <tr><td>Gemini 2.5 Pro</td><td>66.0</td><td>52.0</td><td>55.0</td><td>59.0</td><td>56.0</td><td>90.0</td><td>92.0</td><td>88.0</td><td>86.0</td><td>72.0</td><td>79.0</td></tr>
               <tr><td><strong>Human</strong></td><td>96.7</td><td>90.0</td><td>93.3</td><td>93.3</td><td>86.7</td><td>100.0</td><td>93.3</td><td>93.0</td><td>93.3</td><td>95.0</td><td>93.5</td></tr>
             </tbody>
           </table>
@@ -1283,10 +1286,13 @@
               <tr><td>InternVL2-40B</td><td>51.0</td><td>54.0</td><td>30.0</td><td>23.0</td><td>21.0</td><td>69.0</td><td>25.0</td><td>39.0</td></tr>
               <tr><td>InternVL2-76B</td><td>52.0</td><td>51.0</td><td>29.0</td><td>18.0</td><td>22.0</td><td>84.0</td><td>27.0</td><td>40.4</td></tr>
               <tr><td>Claude 3.5 Sonnet</td><td>61.0</td><td>63.0</td><td>33.0</td><td>20.0</td><td>34.0</td><td>62.0</td><td>22.0</td><td>42.1</td></tr>
+              <tr><td>Claude Sonnet 4</td><td>38.0</td><td>57.0</td><td>32.0</td><td>25.0</td><td>33.0</td><td>54.0</td><td>25.0</td><td>37.7</td></tr>
+              <tr><td>Claude Opus 4</td><td>41.0</td><td>47.0</td><td>35.0</td><td>34.0</td><td>36.0</td><td>50.0</td><td>34.0</td><td>39.6</td></tr>
               <tr><td>GPT-4o-mini</td><td>60.0</td><td>51.0</td><td>21.0</td><td>20.0</td><td>18.0</td><td>27.0</td><td>23.0</td><td>31.4</td></tr>
               <tr><td>GPT-4o</td><td>66.0</td><td>56.0</td><td>25.0</td><td>17.0</td><td>26.0</td><td>60.0</td><td>23.0</td><td>39.0</td></tr>
               <tr><td>Gemini 1.5 Flash</td><td>54.0</td><td>51.0</td><td>29.0</td><td>21.0</td><td>19.0</td><td>60.0</td><td>21.0</td><td>36.4</td></tr>
               <tr><td>Gemini 1.5 Pro</td><td>54.0</td><td>57.0</td><td>34.0</td><td>21.0</td><td>40.0</td><td>69.0</td><td>22.0</td><td>42.4</td></tr>
+              <tr><td>Gemini 2.5 Pro</td><td>66.0</td><td>52.0</td><td>55.0</td><td>59.0</td><td>56.0</td><td>72.0</td><td>59.0</td><td>59.9</td></tr>
               <tr><td><strong>Human</strong></td><td>95.0</td><td>95.0</td><td>95.0</td><td>90.0</td><td>95.0</td><td>100.0</td><td>95.0</td><td><strong>95.0</strong></td></tr>
             </tbody>
           </table>
